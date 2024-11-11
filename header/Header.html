@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="zbi_css.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <nav class="I_navbar">
+        <div class="I_navbar-container">
+            <a href="#"
+               class="I_navbar-logo"><img id="I_mobius_logo" src="../../img/mobius_logo.png" width="60" alt="Mobius"/></a>
+            <ul class="I_navbar-menu" id="I_navbar-menu">
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">Home</a></li>
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">Patient Care</a></li>
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">Research</a></li>
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">Education</a></li>
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">For Medical Professionals</a></li>
+                <li class="I_navbar-item"><a href="#" class="I_navbar-link">About</a></li>
+            </ul>
+	        <div class="I_navbar-actions" id="I_log-appointment-search">
+                <a href="#" class="I_navbar-action"><i class="fa-regular fa-user"></i> &nbsp; Log In</a>
+                <a href="#" class="I_navbar-action">Request Appointment</a>
+		        <a href="#" class="I_navbar-action" id="I_search-icon">&nbsp;<i class="fa-solid fa-magnifying-glass"></i>&nbsp;</a>
+	            <input type="text" class="I_navbar-search" id="I_navbar-search" placeholder="Search here...">
+<!--		        <button class="I_clear-search" id="I_clear-search"><i class="I_fa-solid I_fa-x"></i></button>-->
+<!--                <input type="text" class="I_navbar-search" placeholder="Search...">-->
+            </div>
+        </div>
+    </nav>
+</body>
+<script src="zbi_header.js"></script>
+</html>

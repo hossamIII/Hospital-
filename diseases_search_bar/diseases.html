@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseases and Conditions</title>
+</head>
+<body>
+
+    <h1>Diseases and Conditions</h1>
+    <p id="description"></p>
+
+    <ul id="disease-list"></ul>
+
+    <script>
+        // Example list of diseases (in a real application, this might come from a database)
+        const diseases = {
+            "A": ["Asthma", "Anemia", "Arthritis"],
+            "B": ["Bronchitis", "Bipolar Disorder", "Bulimia"],
+            "C": ["Cancer", "Celiac Disease", "COPD"],
+            // ... add more letters and diseases
+        };
+
+        // Function to get URL parameter
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Get the letter parameter from the URL
+        const letter = getQueryParam('letter');
+        
+        // Display the diseases for the selected letter
+        const description = document.getElementById("description");
+        const diseaseList = document.getElementById("disease-list");
+
+        if (letter && diseases[letter]) {
+            description.textContent = `Diseases and conditions that start with '${letter}':`;
+            diseases[letter].forEach(disease => {
+                const listItem = document.createElement("li");
+                listItem.textContent = disease;
+                diseaseList.appendChild(listItem);
+            });
+        } else {
+            description.textContent = "No diseases found for this letter.";
+        }
+    </script>
+
+<h1>Search Results</h1>
+<p id="description"></p>
+<ul id="disease-list"></ul>
+
+<script>
+    // Example list of diseases (replace with a real dataset or API in production)
+    const diseasesDatabase = [
+        "Asthma",
+        "Anemia",
+        "Arthritis",
+        "Bronchitis",
+        "Bipolar Disorder",
+        "Bulimia",
+        "Cancer",
+        "Celiac Disease",
+        "COPD",
+        "Diabetes",
+        "Dengue",
+        "Depression",
+        "Eczema",
+        "Epilepsy"
+        // ... Add more diseases as needed
+    ];
+
+    // Function to get URL parameter
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // Get the search query parameter from the URL
+    const query = getQueryParam('query');
+    
+    // Display diseases that match the search query
+    const description1 = document.getElementById("description");
+    const diseaseList2 = document.getElementById("disease-list");
+
+    if (query) {
+        description1.textContent = `Search results for "${query}":`;
+        // Filter diseases that contain the query (case-insensitive)
+        const matchingDiseases = diseasesDatabase.filter(disease => 
+            disease.toLowerCase().includes(query.toLowerCase())
+        );
+
+        if (matchingDiseases.length > 0) {
+            matchingDiseases.forEach(disease => {
+                const listItem = document.createElement("li");
+                listItem.textContent = disease;
+                diseaseList2.appendChild(listItem);
+            });
+        } else {
+            diseaseList2.textContent = "No diseases found for this search term.";
+        }
+    } else {
+        description1.textContent = "No search term provided.";
+    }
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+/* .hideen{
+    display: none;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.F_container {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+}
+
+.F_alphabet-section h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.F_alphabet-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+
+.F_alphabet-links a {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #8cc5ff;
+    background-color: #f9f9f9;
+    color: #0057b8;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 48px;
+    max-height: 48px;
+}
+
+.F_alphabet-links a:hover {
+    color: #007bff;
+    border-color: #007bff;
+}
+
+
+
+F_.search-section {
+    font-family: Arial, sans-serif;
+}
+
+.F_search-container {
+
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 25px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.F_search-icon {
+    padding: 0 10px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+#F_search {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.F_clear-button {
+    padding: 0 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #555;
+    display: inline-block;
+}
+
+#F_search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: inline-block;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+#F_search-button:hover {
+    background-color: #0056b3;
+}
+
+
+#F_search-button.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#F_search-button.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+ 
